@@ -1,0 +1,318 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.cv-container {
+  display: flex;
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  min-height: 1px;
+}
+
+/* Left Column */
+.left-column {
+  flex: 0.4;
+  background-color: #181d30;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.profile-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 45%;
+  margin: 0 auto 20px;
+  display: block;
+  transition: 0.3s ease;
+
+}
+
+.contact-info, .skills, .work-experience {
+  margin-bottom: 30px;
+  justify-content: space-between;
+  display: contents;
+}
+
+.interests {
+  display: flexbox;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0c8bb6;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+
+#contact-section img {
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  margin-right: 10px;
+  position: relative;
+  display: flex;
+  filter: invert();
+}
+
+#skills-section, #contact-section, #education-section, #interests-section, #work-experience-section{
+  max-height: 500px; /* Set an appropriate max-height */
+  opacity: 1;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+
+
+.skills .skill-item {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  
+}
+
+.skill-bar {
+  background-color: #3b4a5a;
+  height: 8px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.skill-level {
+  height: 8px;
+  background: linear-gradient(90deg, rgb(12, 139, 182) 0%, #4db3e6 100%);
+  border-radius: 5px;
+  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+.skill-item:hover .skill-level{
+  box-shadow: 10px 0px 15px rgba(12, 139, 182, 0.7);
+}
+.interests ul {
+  list-style-type: none;
+}
+
+.interests ul li {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.interests ul li:before {
+  content: "•";
+  color: #009fe3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Right Column */
+.right-column {
+  flex: 0.6;
+  padding: 30px 40px;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #2c3e50;
+  letter-spacing: 2px;
+}
+
+.highlight {
+  color: #0c8bb6;
+}
+
+.personal-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+  
+}
+
+.personal-details {
+  font-family: Calibri;
+  font-size: 17px;
+  margin-bottom: none;
+}
+
+.personal-info ul li {
+  margin-bottom: 2px;
+  font-size: 16px;
+}
+
+/* Timeline for Education */
+.timeline {
+  display: flexbox;
+  flex-direction: column;
+  padding-left: 30px;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  overflow: hidden;
+  
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.year {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: #181d30;
+  transform: rotate(270deg);
+  position:relative;
+  display: blocK;
+  right: 48px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
+
+.year-work {
+  flex: 0.2;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: #181d30;
+  transform: rotate(270deg);
+  position: absolute;
+  left: -14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
+
+.details {
+  font-size: 13px;
+  border-left: 4px solid #0c8bb6;
+  position: relative;
+  padding: 10px;
+  left: -55px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 0px;
+  margin-left: 0%;
+  font-family: Calibri;
+  display: block;
+}
+
+.work-details {
+  flex: 0.8;
+  font-size: 13px;
+  border-left: 4px solid #0c8bb6;
+  position: relative;
+  padding: 10px;
+  left: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 0px;
+  font-family: Calibri;
+}
+
+
+.interests {
+  transition: margin-top 0.5s ease;
+  margin-top: 0px;
+}
+
+.hidden ~ .interests {
+  margin-top: -20px; /* Moves interests up when skills are hidden */
+}
+
+#toggle-skills, #toggle-contact, #toggle-interests, #toggle-education, #toggle-work {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#toggle-interests:hover { 
+  text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #02c0ff;
+}
+
+#toggle-contact:hover { 
+  text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #02c0ff;
+}
+
+#toggle-education:hover { 
+  text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #0d92be;
+}
+#toggle-skills:hover { 
+  text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #02c0ff;
+}
+
+#toggle-work:hover { 
+  text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #0d92be;
+}
+
+.work-experience h2 {
+  margin-bottom: 20px;
+}
+
+.work-experience ul {
+  list-style-type:decimal;
+  padding: 15px;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .cv-container {
+      width: 95%;
+  }
+
+  /* Stack the image and text on smaller screens */
+  .personal-info {
+      flex-direction: column;
+      text-align: left;
+  }
+
+  .personal-info img {
+      margin-left: 0;
+      margin-top: 20px;
+  }
+}
